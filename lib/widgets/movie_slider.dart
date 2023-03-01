@@ -40,7 +40,7 @@ class _MovieSliderState extends State<MovieSlider> {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 20),
       width: double.infinity,
-      height: 310,
+      height: 320,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -86,8 +86,8 @@ class _MoviePoster extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(30),
             child: GestureDetector(
-              onTap: () => Navigator.pushNamed(context, 'details',
-                  arguments: 'movie-populares'),
+              onTap: () =>
+                  Navigator.pushNamed(context, 'details', arguments: movie),
               child: FadeInImage(
                 fit: BoxFit.cover,
                 placeholder: const AssetImage(
